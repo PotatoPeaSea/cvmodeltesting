@@ -35,7 +35,7 @@ cvmodeltesting/
 
 ## Prerequisites
 
-- Python **3.10+** recommended
+- Python **3.10+** (tested baseline; earlier versions may work but are not verified)
 - A desktop environment (for Tkinter/OpenCV windows)
 - Optional webcam for live demos
 
@@ -193,7 +193,7 @@ Label behavior:
 
 ## Notes and Limitations
 
-- This repository is demo-oriented and currently has no configured automated test suite in-tree.
+- This repository is demo-oriented and currently has no configured automated test suite.
 - Model binaries are intentionally not included.
 - Some scripts are tailored to specific model I/O signatures (especially segmentation and detector paths).
 
