@@ -35,7 +35,7 @@ cvmodeltesting/
 
 ## Prerequisites
 
-- Python **3.10+** (minimum tested version; Python 3.9 and below are currently unsupported in this repo)
+- Python **3.10+** required
 - A desktop environment (for Tkinter/OpenCV windows)
 - Optional webcam for live demos
 
@@ -63,7 +63,7 @@ Model binaries are not committed in this repo. Place ONNX files where each scrip
 |---|---|---|
 | EfficientNet-B0 classifier | `efficientnet_demo.py` | `./efficientnet_b0.onnx`, `./labels.txt` |
 | BEiT classifier | `beit/beit_demo.py` | `./beit/beit.onnx`, `./beit/labels.txt` |
-| Conditional-DETR detector | `conditional-detr/conditional_detr_demo.py` | `./conditional-detr/conditional-detr/conditional_detr_resnet50.onnx` (nested folder name is intentional and matches the current script constant) |
+| Conditional-DETR detector | `conditional-detr/conditional_detr_demo.py` | `./conditional-detr/conditional-detr/conditional_detr_resnet50.onnx` (nested path is required because the script resolves `SCRIPT_DIR/conditional-detr/conditional_detr_resnet50.onnx`) |
 | EdgeTAM Tkinter app | `edgetam/edgetam_demo.py` | `./edgetam/edgetam/encoder.onnx`, `./edgetam/edgetam/decoder.onnx` |
 | SAM2 OpenCV app | `edgetam/sam2_opencv_demo.py` | CLI defaults: `encoder.onnx`, `decoder.onnx` in current working dir (or pass `--encoder` / `--decoder`) |
 | Universal Explorer | `model_explorer.py` | One or more model folders containing `metadata.json` + listed model files |
@@ -193,7 +193,7 @@ Label behavior:
 
 ## Notes and Limitations
 
-- This repository is demo-oriented and currently has no configured automated test suite.
+- This repository is demo-oriented and does not have a configured automated test suite.
 - Model binaries are intentionally not included.
 - Some scripts are tailored to specific model I/O signatures (especially segmentation and detector paths).
 
