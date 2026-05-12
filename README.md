@@ -63,7 +63,7 @@ Model binaries are not committed in this repo. Place ONNX files where each scrip
 |---|---|---|
 | EfficientNet-B0 classifier | `efficientnet_demo.py` | `./efficientnet_b0.onnx`, `./labels.txt` |
 | BEiT classifier | `beit/beit_demo.py` | `./beit/beit.onnx`, `./beit/labels.txt` |
-| Conditional-DETR detector | `conditional-detr/conditional_detr_demo.py` | `./conditional-detr/conditional-detr/conditional_detr_resnet50.onnx` (nested path is required because the script resolves `SCRIPT_DIR/conditional-detr/conditional_detr_resnet50.onnx`) |
+| Conditional-DETR detector | `conditional-detr/conditional_detr_demo.py` | `./conditional-detr/conditional-detr/conditional_detr_resnet50.onnx` |
 | EdgeTAM Tkinter app | `edgetam/edgetam_demo.py` | `./edgetam/edgetam/encoder.onnx`, `./edgetam/edgetam/decoder.onnx` |
 | SAM2 OpenCV app | `edgetam/sam2_opencv_demo.py` | CLI defaults: `encoder.onnx`, `decoder.onnx` in current working dir (or pass `--encoder` / `--decoder`) |
 | Universal Explorer | `model_explorer.py` | One or more model folders containing `metadata.json` + listed model files |
