@@ -35,7 +35,7 @@ cvmodeltesting/
 
 ## Prerequisites
 
-- Python **3.10+** (tested baseline; earlier versions may work but are not verified)
+- Python **3.10+** (minimum tested version; Python 3.9 and below are currently unsupported in this repo)
 - A desktop environment (for Tkinter/OpenCV windows)
 - Optional webcam for live demos
 
@@ -50,7 +50,7 @@ pip install numpy opencv-python onnxruntime pillow
 For `sam2/sam2_demo.py`, install extra dependencies from Qualcomm AI Hub models:
 
 ```bash
-pip install "qai-hub-models[sam2]" git+https://github.com/facebookresearch/sam2.git@2b90b9f
+pip install "qai-hub-models[sam2]" git+https://github.com/facebookresearch/sam2.git
 ```
 
 ---
@@ -63,7 +63,7 @@ Model binaries are not committed in this repo. Place ONNX files where each scrip
 |---|---|---|
 | EfficientNet-B0 classifier | `efficientnet_demo.py` | `./efficientnet_b0.onnx`, `./labels.txt` |
 | BEiT classifier | `beit/beit_demo.py` | `./beit/beit.onnx`, `./beit/labels.txt` |
-| Conditional-DETR detector | `conditional-detr/conditional_detr_demo.py` | `./conditional-detr/conditional-detr/conditional_detr_resnet50.onnx` |
+| Conditional-DETR detector | `conditional-detr/conditional_detr_demo.py` | `./conditional-detr/conditional-detr/conditional_detr_resnet50.onnx` (nested folder name is intentional and matches the current script constant) |
 | EdgeTAM Tkinter app | `edgetam/edgetam_demo.py` | `./edgetam/edgetam/encoder.onnx`, `./edgetam/edgetam/decoder.onnx` |
 | SAM2 OpenCV app | `edgetam/sam2_opencv_demo.py` | CLI defaults: `encoder.onnx`, `decoder.onnx` in current working dir (or pass `--encoder` / `--decoder`) |
 | Universal Explorer | `model_explorer.py` | One or more model folders containing `metadata.json` + listed model files |
